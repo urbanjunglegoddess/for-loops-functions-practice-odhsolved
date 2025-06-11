@@ -10,6 +10,7 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  
 
 }
 
