@@ -6,7 +6,6 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
 }
 
 // === TEST YOURSELF ===

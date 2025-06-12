@@ -4,9 +4,18 @@
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
 export function getClientsWithLetterInName(array, letter) {
-  // Your code goes here...
-
+    // Your code goes here...
+    const result = [];
+    const regex = new RegExp ( letter, 'i' ); // 'i' for case-insensitive
+    for ( let i = 0 ; i < array.length ; i++ ) {
+        const name = array[i].name;
+        if ( typeof name === 'string' && regex.test ( name ) ) {
+            result.push ( name );
+        }
+    }
+    return result;
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
