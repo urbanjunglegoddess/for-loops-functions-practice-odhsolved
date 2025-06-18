@@ -5,9 +5,9 @@
 
 export function getClientWithNoMoney(array) {
   // Your code goes here...
-    const holderNames = [];
-    for (const value of array) {
-        if (value.name && typeof value.name === 'string'&& value.balance === 0) {
+    let holderNames = [];
+    for (let value of array) {
+        if (value.balance === 0) {
             holderNames.push(value.name);
         }
     }
