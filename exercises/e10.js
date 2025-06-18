@@ -6,16 +6,15 @@
 export function getClientsWithLetterInName(array, letter) {
     // Your code goes here...
     const result = [];
-    const regex = new RegExp ( letter, 'i' ); // 'i' for case-insensitive
-    for ( let i = 0 ; i < array.length ; i++ ) {
-        const name = array[i].name;
-        if ( typeof name === 'string' && regex.test ( name ) ) {
-            result.push ( name );
+   for (let user of array){
+    for (let char of user.name){
+        if(char.toLowerCase()===letter.toLowerCase()){
+            result.push(user.name)
         }
     }
-    return result;
 }
-
+return result;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
